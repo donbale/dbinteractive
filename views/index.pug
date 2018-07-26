@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	body
+		script.
+			$(document).ready(function() {
+				$('#networks').DataTable({
+				"scrollY":        "500px",
+				"scrollCollapse": true,
+				"paging":         false
+				});
+			});
+		.container
+			table#networks.table.table-hover.datatables
+				thead
+					tr
+						th Name
+						th Type
+						th Owner
+						th Nodes
+						th Links
+						th Services
+						
+				tbody
+					each network in networks
+						tr
+							td= network.file_name
+							td= network.type
+							td= network.owner
+							td= network.number_of_nodes
+							td= network.number_of_links
+							td= network.number_of_services						
+
+
