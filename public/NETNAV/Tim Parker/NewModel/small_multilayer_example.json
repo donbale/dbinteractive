@@ -1,0 +1,293 @@
+{
+    "demands": [
+        {
+            "bandwidth": 1000000,
+            "endpoints": {
+                "destination": "d6fe8819-2efc-4bb1-8da3-2714f75c7b42",
+                "source": "ff8a5090-1bf6-415e-bf8b-dd97dbdcf757",
+                "type": "P2P"
+            },
+            "id": "ffb8d868-5611-4ba0-b30d-6e9c96f5b782",
+            "name": "p2p_A->D",
+            "properties": {
+                "dste_class": 0,
+                "requested_bandwidth": 1,
+                "user_tag": ""
+            },
+            "protocol": {
+                "reserved_bandwidth": 1000000,
+                "type": "MPLS-TE"
+            },
+            "routes": [
+                {
+                    "id": 10,
+                    "paths": {
+                        "paths": [
+                            [
+                                "4cc5ef27-7b7e-41f3-9d1f-926f5d72215d",
+                                "b1b3a91d-db09-47cb-82e8-f759c3762c4d"
+                            ]
+                        ],
+                        "type": "Sequence"
+                    },
+                    "type": "Static"
+                }
+            ]
+        },
+        {
+            "bandwidth": 300000,
+            "endpoints": {
+                "destination": "44b59125-8682-47fd-8062-73989bbf4f5a",
+                "source": "767e22f3-771d-4cd6-b38a-b08c8c3692a1",
+                "type": "P2P"
+            },
+            "id": "f156fc0f-9bca-489b-9567-c98354395587",
+            "name": "ip_A->D",
+            "properties": {
+                "dste_class": 0,
+                "requested_bandwidth": 0.29999999999999999,
+                "user_tag": ""
+            },
+            "protocol": {
+                "type": "IP"
+            },
+            "routes": [
+                {
+                    "id": 10,
+                    "paths": {
+                        "paths": [
+                            [
+                                "08626d8a-ed15-4146-bea1-be8935a285b5"
+                            ]
+                        ],
+                        "type": "Sequence"
+                    },
+                    "type": "Dynamic"
+                }
+            ]
+        }
+    ],
+    "dynamic_properties": {
+        "Selected_Service": ""
+    },
+    "layers": [
+        {
+            "ecmp_enabled": true,
+            "id": "a3f2fea0-72bc-401c-a533-87c77f026225",
+            "name": "physical"
+        },
+        {
+            "ecmp_enabled": true,
+            "id": "423f0daf-93b7-4e2e-8778-6a8b680235fe",
+            "name": "virtual"
+        }
+    ],
+    "links": [
+        {
+            "capacity": 1000000,
+            "destination": "26bbde90-2ea1-47cd-a036-292e9bc2c40a",
+            "enabled": true,
+            "id": "4cc5ef27-7b7e-41f3-9d1f-926f5d72215d",
+            "metrics": {
+                "igp": 1,
+                "te": 1
+            },
+            "name": "AB [forward]",
+            "properties": {
+                "delay": 0,
+                "usertag": ""
+            },
+            "source": "ff8a5090-1bf6-415e-bf8b-dd97dbdcf757"
+        },
+        {
+            "capacity": 1000000,
+            "destination": "ff8a5090-1bf6-415e-bf8b-dd97dbdcf757",
+            "enabled": true,
+            "id": "b09aa839-7e5e-41f9-b466-d6efd9a0fea0",
+            "metrics": {
+                "igp": 1,
+                "te": 1
+            },
+            "name": "AB [backward]",
+            "properties": {
+                "delay": 0,
+                "usertag": ""
+            },
+            "source": "26bbde90-2ea1-47cd-a036-292e9bc2c40a"
+        },
+        {
+            "capacity": 1000000,
+            "destination": "18baa229-6d5a-4450-8107-d60d872ada7f",
+            "enabled": true,
+            "id": "d89d9336-9107-4df7-a8e0-89619c567f5e",
+            "metrics": {
+                "igp": 1,
+                "te": 1
+            },
+            "name": "AC [forward]",
+            "properties": {
+                "delay": 0,
+                "usertag": ""
+            },
+            "source": "ff8a5090-1bf6-415e-bf8b-dd97dbdcf757"
+        },
+        {
+            "capacity": 1000000,
+            "destination": "ff8a5090-1bf6-415e-bf8b-dd97dbdcf757",
+            "enabled": true,
+            "id": "1cefeaae-17a0-4bba-b210-cd669f9e2d2d",
+            "metrics": {
+                "igp": 1,
+                "te": 1
+            },
+            "name": "AC [backward]",
+            "properties": {
+                "delay": 0,
+                "usertag": ""
+            },
+            "source": "18baa229-6d5a-4450-8107-d60d872ada7f"
+        },
+        {
+            "capacity": 1000000,
+            "destination": "d6fe8819-2efc-4bb1-8da3-2714f75c7b42",
+            "enabled": true,
+            "id": "b1b3a91d-db09-47cb-82e8-f759c3762c4d",
+            "metrics": {
+                "igp": 1,
+                "te": 1
+            },
+            "name": "BD [forward]",
+            "properties": {
+                "delay": 0,
+                "usertag": ""
+            },
+            "source": "26bbde90-2ea1-47cd-a036-292e9bc2c40a"
+        },
+        {
+            "capacity": 1000000,
+            "destination": "d6fe8819-2efc-4bb1-8da3-2714f75c7b42",
+            "enabled": true,
+            "id": "4c5b1a9d-6e64-4f16-84b5-debee3798d53",
+            "metrics": {
+                "igp": 1,
+                "te": 1
+            },
+            "name": "CD [forward]",
+            "properties": {
+                "delay": 0,
+                "usertag": ""
+            },
+            "source": "18baa229-6d5a-4450-8107-d60d872ada7f"
+        },
+        {
+            "capacity": 1000000,
+            "destination": "44b59125-8682-47fd-8062-73989bbf4f5a",
+            "enabled": true,
+            "id": "08626d8a-ed15-4146-bea1-be8935a285b5",
+            "metrics": {
+                "igp": 1,
+                "te": 1
+            },
+            "name": "virtual - p2p_A->D [forward]",
+            "properties": {
+                "delay": 0,
+                "usertag": "",
+                "virtual_link": true
+            },
+            "source": "767e22f3-771d-4cd6-b38a-b08c8c3692a1"
+        }
+    ],
+    "nodes": [
+        {
+            "geo": {
+                "latitude": 0,
+                "longitude": -100
+            },
+            "id": "ff8a5090-1bf6-415e-bf8b-dd97dbdcf757",
+            "layer": "a3f2fea0-72bc-401c-a533-87c77f026225",
+            "name": "A [physical]",
+            "properties": {
+                "address": "",
+                "routable_type": "internal",
+                "user_tag": ""
+            }
+        },
+        {
+            "geo": {
+                "latitude": 0,
+                "longitude": -100
+            },
+            "id": "767e22f3-771d-4cd6-b38a-b08c8c3692a1",
+            "layer": "423f0daf-93b7-4e2e-8778-6a8b680235fe",
+            "name": "A [virtual]",
+            "properties": {
+                "address": "",
+                "routable_type": "internal",
+                "user_tag": ""
+            }
+        },
+        {
+            "geo": {
+                "latitude": -50,
+                "longitude": 0
+            },
+            "id": "26bbde90-2ea1-47cd-a036-292e9bc2c40a",
+            "layer": "a3f2fea0-72bc-401c-a533-87c77f026225",
+            "name": "B",
+            "properties": {
+                "address": "",
+                "routable_type": "internal",
+                "user_tag": ""
+            }
+        },
+        {
+            "geo": {
+                "latitude": 50,
+                "longitude": 0
+            },
+            "id": "18baa229-6d5a-4450-8107-d60d872ada7f",
+            "layer": "a3f2fea0-72bc-401c-a533-87c77f026225",
+            "name": "C",
+            "properties": {
+                "address": "",
+                "routable_type": "internal",
+                "user_tag": ""
+            }
+        },
+        {
+            "geo": {
+                "latitude": 0,
+                "longitude": 100
+            },
+            "id": "d6fe8819-2efc-4bb1-8da3-2714f75c7b42",
+            "layer": "a3f2fea0-72bc-401c-a533-87c77f026225",
+            "name": "D [physical]",
+            "properties": {
+                "address": "",
+                "routable_type": "internal",
+                "user_tag": ""
+            }
+        },
+        {
+            "geo": {
+                "latitude": 0,
+                "longitude": 100
+            },
+            "id": "44b59125-8682-47fd-8062-73989bbf4f5a",
+            "layer": "423f0daf-93b7-4e2e-8778-6a8b680235fe",
+            "name": "D [virtual]",
+            "properties": {
+                "address": "",
+                "routable_type": "internal",
+                "user_tag": ""
+            }
+        }
+    ],
+    "tunnels": [
+        {
+            "demand": "ffb8d868-5611-4ba0-b30d-6e9c96f5b782",
+            "id": "31ae1f81-c9a9-4ad6-8bc4-c56bb8a4c3a4",
+            "link": "08626d8a-ed15-4146-bea1-be8935a285b5"
+        }
+    ]
+}

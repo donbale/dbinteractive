@@ -1,0 +1,39 @@
+!User=steve.turnbull
+!
+!Logical interface needs to be created
+!
+interface Tunnel <UniqueInterfaceNum#abbcc>
+description TE from Node A to Node E
+ip unnumbered Loopback0
+bandwidth 10000000
+no ip directed-broadcast
+load-interval 30
+tunnel destination 
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng priority 7 7
+!
+! Allow the path to be recorded for troubleshooting
+tunnel mpls traffic-eng record route
+!
+! Allow IGP to use tunnels in calculations
+tunnel mpls traffic-eng autoroute announce
+tunnel mpls traffic-eng autoroute relative metric 4
+!
+! the tunnel has a manually-defined path as its first choice
+! with a dynamic path in the event of the first path failing
+tunnel mpls traffic-eng path-option 5 explicit name PATH-Node A-Node E 
+tunnel mpls traffic-eng path-option 10 explicit name PATH-Node A-Node E
+!
+!
+!
+!
+!
+ip explicit-path name PATH-Node A-Node E enable
+next-address 
+next-address 
+next-address 
+next-address 
+!
+ip explicit-path name PATH-Node A-Node E enable
+next-address 
+!

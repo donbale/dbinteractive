@@ -11,7 +11,7 @@ const Network = mongoose.model('Network');
 router.get('/', (req, res) => {
 	Network.find()
 		.then((networks) => {
-			res.render('index', { title: 'Listing networks',
+			res.render('index', { title: 'Aria Network Finder',
 networks });
 		})
 		.catch(() => { res.send('Sorry! Something went wrong.'); });

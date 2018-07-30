@@ -18,8 +18,10 @@ html
 		<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
 
 	body(style="padding-bottom:10rem;")
-		.container
+		.container-fluid
 			.jumbotron.my-4
-				h1.display-3 Aria Network Finder
+				h1.display-3 
+					a(href="/") Aria Network Finder
 
-		block content
+		.container-fluid
+			block content

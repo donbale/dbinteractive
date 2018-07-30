@@ -5,18 +5,19 @@ block content
 		script.
 			$(document).ready(function() {
 				$('#networks').DataTable({
-				"scrollY":        "500px",
+				"scrollY":        "800px",
 				"scrollCollapse": true,
 				"paging":         false
 				});
 			});
-		.container
+
+		.container-fluid
 			table#networks.table.table-hover.datatables
 				thead
 					tr
 						th Name
 						th Type
-						th Owner
+						th Uploader
 						th Nodes
 						th Links
 						th Services
@@ -24,7 +25,8 @@ block content
 				tbody
 					each network in networks
 						tr
-							td= network.file_name
+							td 
+								a(href=network.path_file_name) #{network.file_name}  
 							td= network.type
 							td= network.owner
 							td= network.number_of_nodes
